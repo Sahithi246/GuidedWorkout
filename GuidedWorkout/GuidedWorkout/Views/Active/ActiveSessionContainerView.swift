@@ -44,6 +44,23 @@ struct ActiveSessionContainerView: View {
                 }
                 .accessibilityLabel("Back to overview")
             }
+
+            if case .exercising = vm.phase, let exercise = vm.currentExercise {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        vm.enterDemo()
+                        path.append(.demo(exercise))
+                    } label: {
+                        HStack(spacing: 4) {
+                            Image(systemName: "play.rectangle")
+                            Text("Demo")
+                        }
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(AppTheme.coral)
+                    }
+                    .accessibilityLabel("View exercise demo")
+                }
+            }
         }
     }
 }

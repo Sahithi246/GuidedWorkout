@@ -1,7 +1,7 @@
 # GuidedWorkout — Implementation Notes
 
-Take-home companion document. Covers assumptions, run steps, **HLD**, **LLD**,
-key correctness decisions, tradeoffs, and what I'd add given more time.
+Covers assumptions, run steps, **HLD**, **LLD**, key correctness decisions,
+tradeoffs, and what I'd add given more time.
 
 For the quick "what is this and how do I run it" overview, see
 [README.md](./README.md).

@@ -61,19 +61,6 @@ struct ActiveExerciseView: View {
                     .font(.caption.weight(.semibold).uppercaseSmallCaps())
                     .foregroundStyle(.secondary)
                 Spacer()
-                Button {
-                    vm.enterDemo()
-                    if let ex = exercise { path.append(.demo(ex)) }
-                } label: {
-                    HStack(spacing: 4) {
-                        Image(systemName: "play.rectangle")
-                        Text("Demo").font(.caption.weight(.semibold))
-                    }
-                    .foregroundStyle(AppTheme.coral)
-                    .padding(.horizontal, 12).padding(.vertical, 6)
-                    .background(Capsule().fill(AppTheme.coral.opacity(0.12)))
-                }
-                .accessibilityLabel("View exercise demo")
             }
 
             SessionRibbon(

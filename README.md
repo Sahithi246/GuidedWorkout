@@ -5,9 +5,8 @@ prescribed routine, walks the user through each exercise (rep or time based),
 times rests, surfaces a per-exercise demo, and produces a session summary —
 with offline-first persistence and pending-sync recovery.
 
-Built as a take-home for native iOS feature delivery: MVVM + `@Observable`,
-async/await service boundaries, wall-clock timers, local-first writes, and
-a reasoned design system.
+Native iOS feature delivery: MVVM + `@Observable`, async/await service
+boundaries, wall-clock timers, local-first writes, and a reasoned design system.
 
 ## Highlights
 
@@ -112,9 +111,9 @@ GuidedWorkout/                       ← repo root
 
 ## Where to go next
 
-- **[NOTES.md](./NOTES.md)** — the take-home companion: assumptions, HLD/LLD
-  walkthrough, timer correctness derivation, lifecycle decisions, tradeoffs,
-  test coverage map, and a "given more time" list.
+- **[NOTES.md](./NOTES.md)** — assumptions, HLD/LLD walkthrough, timer
+  correctness derivation, lifecycle decisions, tradeoffs, test coverage map,
+  and a "given more time" list.
 - **`GuidedWorkout/GuidedWorkoutTests/`** — read these for a quick understanding
   of the behavior the VM guarantees (totals, milestone rule, sync transitions,
   snapshot round-trips, timer wall-clock math).
