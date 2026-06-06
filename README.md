@@ -44,10 +44,37 @@ Then in Xcode:
 3. **⌘R** to run, **⌘U** to run tests.
 
 Requirements: **Xcode 16+** and the **iOS 26 SDK**. Deployment target is iOS 26.2.
+The app is locked to **Light** mode (the warm coral / cream palette is
+designed for light only).
 
-To see the simulated fetch / save failures (off by default), flip
-`demoFailuresEnabled = true` in `GuidedWorkoutApp.swift` and rebuild. The unit
-tests cover both failure paths regardless of the toggle.
+## Demo failures toggle — read this before your first run
+
+The brief calls out **one simulated initial-load failure** and **one
+simulated progress-save failure** that should be recoverable on retry. Those
+are demonstrated live by the app, controlled by a single boolean at the top
+of `GuidedWorkout/GuidedWorkout/GuidedWorkoutApp.swift`:
+
+```swift
+private static let demoFailuresEnabled = true     // ← currently ON
+```
+
+**With the toggle ON** (current default — what you'll see on first run):
+
+| When | What happens |
+|---|---|
+| First launch | `fetchTodaySession()` throws once → "Couldn't load today's session" with a coral **Try again** button → tap it → session loads. |
+| Mid-workout (after exercise 2 — Glute Bridge) | `completeExercise()` throws once → that exercise's progress is marked `.pending` locally → a coral **pending-sync banner** appears on the Overview / Summary screens with a **Retry** button → tap it → flips to `.synced`. |
+
+**With the toggle OFF** (set it to `false` and rebuild):
+
+The app loads straight into today's session and every save succeeds. Use
+this if you've already seen the failure flows once and want clean
+iteration.
+
+**Either way**, the unit tests in `GuidedWorkoutTests/` exercise both
+failure paths and their successful retries — independent of the toggle.
+See `fetchFailureSurfacesLoadFailed`, `retryAfterFetchFailureSucceeds`,
+`saveFailureMarksProgressPending`, `retryPendingSyncRecoversToSynced`.
 
 ## Project layout
 
