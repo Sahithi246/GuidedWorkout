@@ -25,11 +25,22 @@ The bundled mock service supports the two failures the brief calls out:
 - One simulated progress-save failure on the second exercise (stays `.pending`
   until you tap **Retry** on the banner)
 
-**These failures are off by default** to keep iteration smooth. Flip
-`demoFailuresEnabled = true` at the top of `GuidedWorkoutApp.swift` and
-rebuild to inspect the failure-handling UI by hand. The unit tests in
-`GuidedWorkoutTests/` exercise both paths (and their successful retries)
-regardless of the toggle:
+Both are controlled by a single constant at the top of `GuidedWorkoutApp.swift`:
+
+```swift
+private static let demoFailuresEnabled = true     // ← currently ON
+```
+
+**ON (default for submission):** First launch shows the fetch failure with a
+Try again button; the second exercise's save fails so the pending-sync banner
+appears. Tapping Retry recovers in both cases.
+
+**OFF (flip to `false` and rebuild):** The app loads straight into today's
+session, every save succeeds. Use this for clean iteration after you've
+already inspected the failure flows.
+
+The unit tests in `GuidedWorkoutTests/` exercise both failure paths (and
+their successful retries) regardless of the toggle:
 - `fetchFailureSurfacesLoadFailed`
 - `retryAfterFetchFailureSucceeds`
 - `saveFailureMarksProgressPending`
