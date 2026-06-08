@@ -1,3 +1,9 @@
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-06-06 at 23 47 16" src="https://github.com/user-attachments/assets/8791b228-9a27-4d74-8075-e993715b04fd" />
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-06-06 at 23 47 05" src="https://github.com/user-attachments/assets/b0c9d30f-65a0-456a-88c3-b1b6c0c6ab69" />
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-06-06 at 23 46 33" src="https://github.com/user-attachments/assets/845f9237-1744-4f28-9fb3-666144df7e30" />
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-06-06 at 23 46 23" src="https://github.com/user-attachments/assets/66e29330-c484-46de-88d5-3ee1e38fbbe8" />
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-06-06 at 23 46 14" src="https://github.com/user-attachments/assets/5be2e07d-3b2a-41ab-bce1-76e4c1c78b57" />
+<img width="1206" height="2622" alt="Simulator Screenshot - iPhone 17 Pro - 2026-06-06 at 23 46 04" src="https://github.com/user-attachments/assets/18208272-e15a-4232-a737-236d8b3a7ff3" />
 # GuidedWorkout
 
 A standalone SwiftUI guided workout experience for a wellness app. Loads today's
